@@ -1,14 +1,13 @@
 import React from 'react';
-import { getAllPosts } from '../../lib/api';
-// import { useTina } from 'tinacms/dist/react'
-  // import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import { getAllData } from '../../lib/customApi';
+
 
 const Posts = ({ allPosts }) => {
 
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
 
-  console.log(allPosts);
+  // console.log(allPosts);
   
   return (
     <div>
@@ -22,7 +21,7 @@ export default Posts;
 
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
+  const allPosts =getAllData([
     'title',
     // 'date',
     // 'slug',

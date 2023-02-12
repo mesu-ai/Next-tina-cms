@@ -43,6 +43,79 @@ export default defineConfig({
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
+      {
+        name: "user",
+        label: "Users",
+        path: "content/users",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+            // ui: {
+            //   timeFormat: "HH:mm"
+            // },
+            isDate:true,
+            required:true,
+          },
+
+          {
+            type: 'image',
+            label: 'Cover Image',
+            name: 'coverImage',
+            isImage:true,
+            required:true,
+          },
+          {
+            type: 'image',
+            label: 'Thumbnail Image',
+            name: 'thumbnailImage',
+            isThumbnail:true,
+            required:true,
+          },
+        
+          {
+            type: "string",
+            name: "tag",
+            label: "Tag",
+            isTag: true,
+            required: true,
+          },
+
+          {
+            type: "string",
+            name: "summary",
+            label: "Summary",
+            isSummary: true,
+            required: true,
+          
+          ui: {
+            component: "textarea"
+          }
+          },
+          
+          
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Description",
+            isDescription: true,
+            required:true,
+          },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+        },
+      },
     ],
   },
 });
