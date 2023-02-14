@@ -44,9 +44,9 @@ export default defineConfig({
         },
       },
       {
-        name: "user",
-        label: "Users",
-        path: "content/users",
+        name: "blog",
+        label: "Blogs",
+        path: "content/blogs",
         fields: [
           {
             type: "string",
